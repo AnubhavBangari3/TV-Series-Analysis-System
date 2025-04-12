@@ -1,3 +1,5 @@
 Include
 Lib
 Scripts
+.gradio/
+__pycache__

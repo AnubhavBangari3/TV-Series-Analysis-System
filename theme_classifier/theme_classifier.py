@@ -7,8 +7,8 @@ import numpy as np
 import os
 import sys
 import pathlib 
-folder_path = pathlib.Path(__file__).parent.resolve()
-sys.path.append(os.path.join(folder_path,'../'))
+#folder_path = pathlib.Path(__file__).parent.resolve()
+#sys.path.append(os.path.join(folder_path,'../'))
 from utils import load_subtitles_dataset
 nltk.download('all')
 
