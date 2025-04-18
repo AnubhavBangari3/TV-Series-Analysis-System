@@ -3,6 +3,8 @@ from theme_classifier import ThemeClassifier
 from character_network import NamedEntityRecognizer, CharacterNetworkGenerator
 from text_classification import JutsuClassifier
 import os
+from dotenv import load_dotenv
+load_dotenv() 
 
 def get_character_network(subtitles_path,ner_path):
     ner = NamedEntityRecognizer()
@@ -17,7 +19,7 @@ def get_character_network(subtitles_path,ner_path):
 def classify_text(text_classifcation_model,text_classifcation_data_path,text_to_classify):
     jutsu_classifier = JutsuClassifier(model_path = text_classifcation_model,
                                        data_path = text_classifcation_data_path,
-                                       huggingface_token = os.getenv('huggingface_token'))
+                                       huggingface_token = os.getenv('huggingFaceToken'))
     
     output = jutsu_classifier.classify_jutsu(text_to_classify)
     output = output[0]

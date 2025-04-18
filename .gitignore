@@ -3,3 +3,4 @@ Lib
 Scripts
 .gradio/
 __pycache__
+.env
